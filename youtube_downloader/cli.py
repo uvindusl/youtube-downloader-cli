@@ -74,6 +74,10 @@ def main(url, type):
         click.echo(click.style(f'\nError: {str(e)}', fg='red', bold=True))
         exit(1)
 
+@click.command()
+@click.option('--v', help="Version")
+def version():
+    click.echo("Vesion 1.0.0")
 
 if __name__ == '__main__':
     main()
